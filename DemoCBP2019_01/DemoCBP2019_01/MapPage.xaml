@@ -39,7 +39,6 @@
                     BackgroundColor="DarkGray"
                     TextColor="White"  
                     Clicked="BotonBorrar_Clicked"  />
-
         </StackLayout>-->
     </Grid>
 </ContentPage>
