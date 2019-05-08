@@ -9,7 +9,37 @@
              <local:MapViewModel x:Key="MapViewModel" />
         </ResourceDictionary>
     </ContentPage.Resources>
+    <!--<ContentPage.BindingContext>
+        <local:MapViewModel />
+    </ContentPage.BindingContext>-->
     <Grid>
-        <esriUI:MapView Map="{Binding Map, Source={StaticResource MapViewModel}}" />
+        <!-- TODO 4. Agregar Layout Aplicación-->
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>-->
+        <esriUI:MapView Map="{Binding Map, Source={StaticResource MapViewModel}}"  />
+        <!-- TODO 6. Propiedades del Mapa -->
+        <!--<esriUI:MapView Map="{Binding Map, Source={StaticResource MapViewModel}}" 
+                        x:Name="Mapa" 
+                        GraphicsOverlays ="{Binding GraphicsOverlayCollection, Source={StaticResource MapViewModel}}"
+                        GeoViewTapped="Mapa_GeoViewTapped"
+                        />-->
+        <!-- TODO 5. Botones -->
+        <!--<StackLayout Grid.Row="1" Orientation="Horizontal">
+            <Button x:Name="BotonCentrar"
+                    Text="Centrar"
+                    Margin="5"
+                    BackgroundColor="DarkGray"
+                    TextColor="White" 
+                    Clicked="BotonCentrar_Clicked"/>
+            <Button x:Name="BotonBorrar"
+                    Text="Borrar"
+                    Margin="5"
+                    BackgroundColor="DarkGray"
+                    TextColor="White"  
+                    Clicked="BotonBorrar_Clicked"  />
+
+        </StackLayout>-->
     </Grid>
 </ContentPage>

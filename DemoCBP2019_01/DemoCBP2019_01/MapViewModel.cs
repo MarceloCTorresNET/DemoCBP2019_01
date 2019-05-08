@@ -14,6 +14,14 @@ using Esri.ArcGISRuntime.Symbology;
 using Esri.ArcGISRuntime.Tasks;
 using Esri.ArcGISRuntime.UI;
 
+// TODO 3. Agregar alias a las Bibliotecas de Colores
+//#if WINDOWS_UWP
+//using Colors = Windows.UI.Colors;
+//#else
+//using Colors = System.Drawing.Color;
+//#endif
+
+
 namespace DemoCBP2019_01
 {
   /// <summary>
@@ -23,6 +31,27 @@ namespace DemoCBP2019_01
   {
     public MapViewModel()
     {
+      //TODO: 3. Agregar Código Constructor: 
+      //GraphicsOverlayCollection = new GraphicsOverlayCollection()
+      //{
+      //  new GraphicsOverlay() { Id = "Esri Colombia"},
+      //  new GraphicsOverlay() { Id = "Eventos"}
+      //};
+
+      //var mapPoint = new MapPoint(-74.051331, 4.673646, SpatialReferences.Wgs84);
+
+      //var graphic = new Graphic()
+      //{
+      //  Geometry = mapPoint,
+      //  Symbol = new SimpleMarkerSymbol
+      //  {
+      //    Color = Colors.Green,
+      //    Style = SimpleMarkerSymbolStyle.Circle,
+      //    Size = 10
+      //  }
+      //};
+      //GraphicsOverlayCollection.First().Graphics.Add(graphic);
+      //Map.InitialViewpoint = new Viewpoint(mapPoint, 5000);
 
     }
 
@@ -36,6 +65,15 @@ namespace DemoCBP2019_01
       get { return _map; }
       set { _map = value; OnPropertyChanged(); }
     }
+
+    // TODO: 1. Agregar CapasGraficas y un gráfico
+    //private GraphicsOverlayCollection _graphicOverlyaCollection;
+
+    //public GraphicsOverlayCollection GraphicsOverlayCollection
+    //{
+    //  get { return _graphicOverlyaCollection; }
+    //  set { _graphicOverlyaCollection = value; OnPropertyChanged(); }
+    //}
 
     /// <summary>
     /// Raises the <see cref="MapViewModel.PropertyChanged" /> event
